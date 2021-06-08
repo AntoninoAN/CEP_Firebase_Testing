@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "564387494390",
+    "project_id": "cep-android-1967a",
+    "storage_bucket": "cep-android-1967a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564387494390:android:36e82356d558b3f37d6fd7",
+        "android_client_info": {
+          "package_name": "com.example.firebase_testing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "564387494390-qp87daukb0k9svvlhs1efs4oucce5pga.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firebase_testing",
+            "certificate_hash": "02bfe04dbcbad19b4a879b232a9e89993ea26f03"
+          }
+        },
+        {
+          "client_id": "564387494390-tfkn5i19vluk2bd2ornvlm4ljjgvupa9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJWqRRzNLWCbnwYlSU5NbNAUAv32u4_Pc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "564387494390-tfkn5i19vluk2bd2ornvlm4ljjgvupa9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
