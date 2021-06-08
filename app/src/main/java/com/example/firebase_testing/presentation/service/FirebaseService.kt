@@ -10,6 +10,7 @@ import android.os.Build
 import android.util.Log
 import androidx.core.app.NotificationCompat
 import com.example.firebase_testing.R
+import com.example.firebase_testing.presentation.view.MainActivity
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import java.lang.Exception
@@ -17,15 +18,20 @@ import java.lang.Exception
 private const val TAG = "FirebaseService"
 class FirebaseService: FirebaseMessagingService() {
 
-    //Apps that use Firebase Cloud Messaging should implement onNewToken()
+    // Apps that use Firebase Cloud Messaging should implement onNewToken()
     // in order to observe token changes
     /**
     Called when a new token for the default Firebase project is generated.
 
     This is invoked after app install when a token is first generated, and again if the token changes.
+
+     * Called if the FCM registration token is updated. This may occur if the security of
+     * the previous token had been compromised. Note that this is called when the
+     * FCM registration token is initially generated so this is where you would retrieve the token.
      */
     override fun onNewToken(p0: String) {
         super.onNewToken(p0)
+        Log.d(TAG, "onNewToken: $p0")
     }
 
     /**
@@ -83,7 +89,7 @@ class FirebaseService: FirebaseMessagingService() {
         val channelId = getString(R.string.default_notification_channel_id)
         val defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
         val notificationBuilder = NotificationCompat.Builder(this, channelId)
-            .setSmallIcon(R.drawable.ic_baseline_notifications_24)
+            .setSmallIcon(R.drawable.ic_baseline_local_offer_24)
             .setContentTitle(getString(R.string.fcm_message))
             .setContentText(messageBody)
             .setAutoCancel(true)
